@@ -1,0 +1,80 @@
+body, html
+  height: 100%
+
+body
+  font-family: Helvetica
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+#header
+  height: 86px
+  width: 100%
+  background: #064597
+  position: relative
+  // TODO
+  overflow: hidden
+  .logo
+    margin: 24px 0 0 0
+  nav
+    float: right
+    height: 100%
+    box-sizing: border-box
+    padding-top: 36px
+    position: relative
+    margin-right: -24px
+    &:after
+      content: ''
+      width: 200%
+      height: 2px
+      background: rgba(255,255,255,0.3)
+      position: absolute
+      bottom: 22px
+      left: 0
+    a
+      padding: 10px 20px
+      color: #fff
+      &:hover
+        color: #fff
+    hr
+      transition: .3s all ease
+      width: 96px
+      left: 0
+      height: 3px
+      background: #fff
+      position: absolute
+      display: block
+      bottom: 0
+    a:nth-child(1):hover ~ hr
+      width: 95px
+      left: 0
+    a:nth-child(2):hover ~ hr
+      left: 94px
+      width: 120px
+    a:nth-child(3):hover ~ hr
+      left: 214px
+      width: 119px
+    a:nth-child(4):hover ~ hr
+      left: 332px
+      width: 105px
+    a:nth-child(5):hover ~ hr
+      left: 435px
+      width: 193px
+    a:nth-child(6):hover ~ hr
+      left: 628px
+      width: 106px
+
+.wrapper
+  max-width: 940px
+  margin: 0 auto
+  height: 100%
+#wrapper
+  min-height: 100%
+  height: auto !important
+  height: 100%
+  margin: 0 auto -155px
+
+#footer
+  height: 136px
+  width: 100%
+  background: #c1d0e5
