@@ -3,9 +3,9 @@ header#header
     = link_to ''
       = image_tag 'orbit_logotype.png', class: 'logo'
     nav
-      = link_to 'Главная', ''
-      = link_to 'О компании', ''
-      = link_to 'Виды работ', ''
+      = link_to 'Главная', '/', class: "#{'active' if @page == 'root'}"
+      = link_to 'О компании', '/company', class: "#{'active' if @page == 'company'}"
+      = link_to 'Виды работ', '/jobs', class: "#{'active' if @page == 'jobs'}"
       = link_to 'Вакансии', ''
       = link_to 'Выполненные объекты', ''
       = link_to 'Контакты', ''

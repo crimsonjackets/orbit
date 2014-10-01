@@ -1,16 +1,27 @@
 footer#footer
-  .col
-    ul
-      li
-      li = link_to 'главная', ''
-      li = link_to 'о компании', ''
-      li = link_to 'виды работ', ''
-  .col
-    ul
-      li = link_to 'сертификаты', ''
-      li = link_to 'вакансии', ''
-      li = link_to 'объекты', ''
-  .col
-      li = link_to 'главная', ''
-      li = link_to 'о компании', ''
-      li = link_to 'виды работ', ''
+  .wrapper
+    table
+      tr
+        td
+          .phones
+            | (812) 310 22 79
+            br
+            | (812) 235 41 43
+          .copyright © ООО "ПКФ"ОРБИТА", 2004-2014
+        td
+          ul
+            li = link_to 'главная', ''
+            li = link_to 'о компании', ''
+            li = link_to 'виды работ', ''
+        td
+          ul
+            li = link_to 'сертификаты', ''
+            li = link_to 'вакансии', ''
+            li = link_to 'объекты', ''
+        td
+          ul
+            li = link_to 'главная', ''
+            li = link_to 'о компании', ''
+            li = link_to 'виды работ', ''
+        td.o-logo
+          = image_tag 'o_logotype.png'

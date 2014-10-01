@@ -1,3 +1,6 @@
+$header-color: #064597
+$footer-color: #c1d0e5
+
 body, html
   height: 100%
 
@@ -7,10 +10,19 @@ a
   text-decoration: none
   &:hover
     text-decoration: none
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+
 #header
   height: 86px
   width: 100%
-  background: #064597
+  background: $header-color
   position: relative
   // TODO
   overflow: hidden
@@ -32,10 +44,12 @@ a
       bottom: 22px
       left: 0
     a
+      font-weight: 300
       padding: 10px 20px
       color: #fff
       &:hover
         color: #fff
+      opacity: 0.6
     hr
       transition: .3s all ease
       width: 96px
@@ -45,36 +59,101 @@ a
       position: absolute
       display: block
       bottom: 0
-    a:nth-child(1):hover ~ hr
-      width: 95px
+    a:hover, a.active
+      opacity: 1
+    a:nth-child(1):hover ~ hr, :nth-child(1).active ~ hr
+      width: 92px
       left: 0
-    a:nth-child(2):hover ~ hr
-      left: 94px
-      width: 120px
-    a:nth-child(3):hover ~ hr
-      left: 214px
-      width: 119px
-    a:nth-child(4):hover ~ hr
-      left: 332px
-      width: 105px
-    a:nth-child(5):hover ~ hr
-      left: 435px
-      width: 193px
-    a:nth-child(6):hover ~ hr
-      left: 628px
-      width: 106px
+    a:nth-child(2):hover ~ hr, :nth-child(2).active ~ hr
+      width: 117px
+      left: 91px
+    a:nth-child(3):hover ~ hr, :nth-child(3).active ~ hr
+      width: 116px
+      left: 207px
+    a:nth-child(4):hover ~ hr, :nth-child(4).active ~ hr
+      width: 102px
+      left: 322px
+    a:nth-child(5):hover ~ hr, :nth-child(5).active ~ hr
+      width: 187px
+      left: 423px
+    a:nth-child(6):hover ~ hr, :nth-child(6).active ~ hr
+      width: 101px
+      left: 609px
 
 .wrapper
-  max-width: 940px
+  width: 940px
   margin: 0 auto
   height: 100%
+
 #wrapper
   min-height: 100%
   height: auto !important
   height: 100%
-  margin: 0 auto -155px
+  margin: 0 auto -136px
+
+  #page-name
+    text-transform: uppercase
+    color: $header-color
+    font-size: 2em
+    text-align: center
+    margin: 40px 0
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      border-radius: 50%
+      background: $header-color
+      margin-left: -8px
+      margin-top: 3px
+
+#sticky-push
+  height: 136px
+  width: 100%
+  clear: both
 
 #footer
   height: 136px
   width: 100%
-  background: #c1d0e5
+  background: $footer-color
+  clear: both
+  .o-logo
+    padding-top: 0px
+    text-align: right
+    img
+      margin-top: -9px
+  table
+    width: 100%
+    height: 136px
+    tr
+      td
+        padding-top: 28px
+        vertical-align: top
+  ul
+    li
+      margin-bottom: 10px
+      a
+        font-weight: 300
+        color: #000
+        text-transform: uppercase
+        &:hover
+          color: #000
+  .phones
+    position: relative
+    left: 26px
+    font-weight: 700
+    letter-spacing: 2px
+    &:before
+      content: ''
+      position: absolute
+      width: 13px
+      height: 13px
+      background:
+        image: image-url('phone_icon.png')
+        repeat: no-repeat
+      top: 4px
+      left: -24px
+  .copyright
+    position: relative
+    margin-top: 22px

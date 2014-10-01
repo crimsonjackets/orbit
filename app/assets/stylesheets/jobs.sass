@@ -1,0 +1,53 @@
+#jobs-types
+  margin-top: 70px
+  overflow: hidden
+  position: relative
+  .arrow-right
+    cursor: pointer
+    position: absolute
+    right: 0
+    top: -50px
+    bottom: 0
+    width: 19px
+    height: 56px
+    margin: auto
+    background:
+      image: image-url('arrow_right_blue.png')
+      repeat: no-repeat
+  .col
+    display: inline-block
+  .item
+    height: 68px
+    width: 400px
+    margin-bottom: 60px
+    margin-right: 70px
+    .num
+      width: 68px
+      height: 68px
+      background: $header-color
+      color: #fff
+      font-size: 3em
+      text-align: center
+      line-height: 68px
+      padding-left: 4px
+      position: absolute
+      &:before
+        content: ''
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: #fff
+        position: absolute
+        left: 10px
+        top: 10px
+    .name
+      padding-left: 98px
+      color: $header-color
+      letter-spacing: 2px
+      font-size: 1.1em
+    .description
+      line-height: 1em
+      margin-top: 20px
+      padding-left: 98px
+      font-weight: 600
+      font-size: .9em
