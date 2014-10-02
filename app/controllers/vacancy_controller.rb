@@ -1,0 +1,2 @@
+class VacancyController < ApplicationController
+end

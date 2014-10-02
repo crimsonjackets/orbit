@@ -6,7 +6,7 @@ header#header
       = link_to 'Главная', '/', class: "#{'active' if @page == 'root'}"
       = link_to 'О компании', '/company', class: "#{'active' if @page == 'company'}"
       = link_to 'Виды работ', '/jobs', class: "#{'active' if @page == 'jobs'}"
-      = link_to 'Вакансии', ''
-      = link_to 'Выполненные объекты', ''
-      = link_to 'Контакты', ''
+      = link_to 'Вакансии', '/vacancy', class: "#{'active' if @page == 'vacancy'}"
+      = link_to 'Выполненные объекты', '/done', class: "#{'active' if @page == 'done'}"
+      = link_to 'Контакты', '/contacts', class: "#{'active' if @page == 'contacts'}"
       hr
