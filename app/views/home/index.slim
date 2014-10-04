@@ -1,12 +1,36 @@
 - @page = 'root'
 
 .slider
-  = image_tag 'orbit_bg.jpg'
-  = image_tag 'orbit_bg.jpg'
-  = image_tag 'orbit_bg.jpg'
+  -(1..3).each do
+    div
+      = image_tag 'orbit_bg.jpg'
+      .wrapper
+        h1 Рады приветствовать Вас на сайте компании  Орбита
+        p
+          | Выбирая «Орбиту», Вы выбираете высочайшее качество работ, передовые технологии, самое современное оборудование и специализированное программное обеспечение.
+          br
+          | Оперативность в принятии и реализации решений. Ответственность за сроки выполнения договорных обязательств. И, конечно, опытный, сплоченный и дружный коллектив!
+        p
+          | Наши специалисты с удовольствием ответят на все интересующие
+          br
+          | Вас вопросы о деятельности фирмы и технологии
+          br
+          | производства работ.
+  .mc-dots
+  .wrapper
+    .arrow-left
+    .arrow-right
 javascript:
   $(document).ready( function() {
     $(function() {
-      $('.slider').makecarousel();
+      $('.slider').makecarousel({
+        next: $('.arrow-right'),
+        prev: $('.arrow-left'),
+        dots: $('.mc-dots')
+      });
+    });
+    $('.slider').height($(window).height()-$('#header').height()-$('#footer').height());
+    $(window).resize( function() {
+      $('.slider').height($(window).height()-$('#header').height()-$('#footer').height());
     });
   });
