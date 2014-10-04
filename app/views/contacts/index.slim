@@ -3,17 +3,44 @@
 script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"
 
 .wrapper
-  #page-name контакты
-  #map-canvas width="100%" height="500px"
+  .page-name контакты
+  .col12
+    h2
+      | Общество с ограниченной ответственностью
+      br
+      | «Производственно-коммерческая
+      br
+      | фирма «ОРБИТА»
+    hr
+    .item
+      h2 адрес офиса:
+      p 197110 г. Санкт-Петербург, Левашовский пр., д. 12, метро Петроградская, Чкаловская
+      .tel тел/факс:   +7(812) 235-41-43,  310-22-79
+    .item
+      h2 Филиал в г. Кингисепп:
+      p Кингисеппское обособленное подразделение ООО «ПКФ «ОРБИТА»: г. Кингисепп, ул. Карла Маркса, д. 9
+      .tel тел/факс: +7(81375) 2-16-62
+    .item
+      h2 Филиал в г. Сланцы:
+      p Сланцевское обособленное подразделение ООО «ПКФ «ОРБИТА»: 188560, Ленинградская область, г. Сланцы, ул. Партизанская, д.15
+      .tel тел. (881374)-725-09
+    .callback
+      p info@orbita-spb.ru
+      textarea placeholder="Оставьте нам сообщение..."
+  .col12
+    #map-canvas width="200px" height="650px"
 
 javascript:
   function initialize() {
-    var mapOptions = {
-      center: new google.maps.LatLng(-34.397, 150.644),
-      zoom: 8,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({address: "Санкт-Петербург, Левашовский пр., д. 12"}, function(result, status){
+      var mapOptions = {
+        center: result[0].geometry.location,
+        disableDefaultUI: true,
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    });
   }
   initialize();
