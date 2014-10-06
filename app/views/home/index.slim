@@ -22,15 +22,15 @@
     .arrow-right
 javascript:
   $(document).ready( function() {
-    $(function() {
-      $('.slider').makecarousel({
-        next: $('.arrow-right'),
-        prev: $('.arrow-left'),
-        dots: $('.mc-dots')
-      });
+    $('.slider').makecarousel({
+      next: $('.arrow-right'),
+      prev: $('.arrow-left'),
+      dots: $('.mc-dots'),
+      cover: true,
+      inStep: 1
     });
-    $('.slider').height($(window).height()-$('#header').height()-$('#footer').height());
+    var doHei = function() {$('.slider').height($(window).height()-$('#header').height()-$('#footer').height());}();
     $(window).resize( function() {
-      $('.slider').height($(window).height()-$('#header').height()-$('#footer').height());
+      doHei();
     });
   });
