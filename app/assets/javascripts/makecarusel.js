@@ -1,4 +1,5 @@
 (function ($) {
+    "use strict";
     $.fn.makecarousel = function (params) {
         var config = $.extend({
                 inStep: 1,
@@ -15,10 +16,9 @@
             ts,
             text = [],
             u,
-            slide,
-            mcMakeBody,
-            mcMakeDots;
-        mcMakeBody = (function (thisBody) {
+            slide;
+
+        (function (thisBody) {
             var div;
             thisBody.append('<div class="mc-window-images"></div>');
             thisBody.append('<div class="mc-window-text"></div>');
@@ -66,7 +66,8 @@
                 });
             }
         }(this));
-        mcMakeDots = (function () {
+
+        (function () {
             if ($(config.dots).is($)) {
                 config.dots.append('<ul class="mc-ul"></ul>');
                 u = config.dots.find('.mc-ul');
@@ -76,6 +77,7 @@
                 }
             }
         }());
+
         function mcActiveDots() {
             if ($(config.dots).is($)) {
                 u.find('li.active').removeClass('active');
@@ -83,6 +85,7 @@
             }
         }
         mcActiveDots();
+
         slide = function (p) {
             config.currentNum += config.currentNum + p >= 0 && config.currentNum + p <
                 ws.length - (config.inStep - 1) ? p : 0;
