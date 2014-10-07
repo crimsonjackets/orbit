@@ -96,17 +96,19 @@ ul
     color: $header-color
     font-size: 2em
     text-align: center
-    margin: 40px 0
+    margin: 40px auto
     position: relative
-    &:before
-      content: ''
-      position: absolute
-      width: 5px
-      height: 5px
-      border-radius: 50%
-      background: $header-color
-      margin-left: -8px
-      margin-top: 3px
+    span
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: $header-color
+        margin-left: -8px
+        margin-top: 3px
 
 #sticky-push
   height: 136px

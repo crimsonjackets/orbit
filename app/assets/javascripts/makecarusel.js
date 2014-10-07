@@ -1,5 +1,4 @@
 (function ($) {
-    "use strict";
     $.fn.makecarousel = function (params) {
         var config = $.extend({
                 inStep: 1,
@@ -41,7 +40,9 @@
             });
             w.css({
                 'width': 100 * ws.length + '%',
-                'transition': config.transition
+                'transition': config.transition,
+                'position': 'absolute',
+                'height': '100%'
             });
             t.css({
                 'position': 'absolute',
@@ -84,6 +85,7 @@
                 u.find('li').eq(config.currentNum).addClass('active');
             }
         }
+
         mcActiveDots();
 
         slide = function (p) {
