@@ -1,30 +1,47 @@
 body#done
-  #slider
+  #overlay
+    height: 325px
     width: 100%
+    position: absolute
+    background:
+      repeat: no-repeat
+      image: url('orbit_bg.jpg')
+      position: center
+      size: cover
+  #mc-slider
     position: relative
     margin: 0 auto
+    width: 940px
+    height: 325px
     .arrow-left
-      height: 56px
-      width: 19px
       position: absolute
-      margin: auto
-      top: 0
-      bottom: 0
       z-index: 1
+      height: 56px
+      margin: auto
       cursor: pointer
+      bottom: 0
+      left: 0
+      width: 19px
+      top: 0
       background:
         image: url('arrow_left_white.png')
         repeat: no-repeat
     .arrow-right
-      cursor: pointer
-      z-index: 1
-      right: 0
-      height: 56px
-      width: 19px
       position: absolute
+      z-index: 1
+      cursor: pointer
+      height: 56px
       margin: auto
-      top: 0
       bottom: 0
+      right: 0
+      width: 19px
+      top: 0
       background:
         image: url('arrow_right_white.png')
         repeat: no-repeat
+
+  .dots
+    background:
+      image: image-url('dots.png')
+    width: 112px
+    height: 6px
