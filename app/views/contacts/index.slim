@@ -29,18 +29,3 @@ script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"
       textarea placeholder="Оставьте нам сообщение..."
   .col12
     #map-canvas width="200px" height="650px"
-
-javascript:
-  function initialize() {
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({address: "Санкт-Петербург, Левашовский пр., д. 12"}, function(result, status){
-      var mapOptions = {
-        center: result[0].geometry.location,
-        disableDefaultUI: true,
-        zoom: 17,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    });
-  }
-  initialize();
