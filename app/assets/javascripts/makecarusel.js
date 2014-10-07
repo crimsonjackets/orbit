@@ -19,10 +19,8 @@
 
         (function (thisBody) {
             var div;
-            thisBody.append('<div class="mc-window-images"></div>');
-            thisBody.append('<div class="mc-window-text"></div>');
-            w = thisBody.find('.mc-window-images');
-            t = thisBody.find('.mc-window-text');
+            w = $('<div class="mc-window-images"></div>').appendTo(thisBody);
+            t = $('<div class="mc-window-text"></div>').appendTo(thisBody);
             ws = thisBody.find('img');
             ws.each(function () {
                 div = $(this).parent();
@@ -89,10 +87,13 @@
         mcActiveDots();
 
         slide = function (p) {
-            config.currentNum += config.currentNum + p >= 0 && config.currentNum + p <
-                ws.length - (config.inStep - 1) ? p : 0;
-            w.css('margin-left', -config.currentNum * 100 / config.inStep + '%');
-            t.css('margin-left', -config.currentNum * 100 / config.inStep + '%');
+            config.currentNum += config.currentNum + p >= 0 &&
+                config.currentNum + p < ws.length -
+                (config.inStep - 1) ? p : 0;
+            w.css('margin-left', -config.currentNum * 100 / config.inStep +
+                '%');
+            t.css('margin-left', -config.currentNum * 100 / config.inStep +
+                '%');
             mcActiveDots();
         };
         if (config.next !== null) {

@@ -11,7 +11,12 @@ $(document).ready(function () {
                         zoom: 17,
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     },
-                    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                    map = new google.maps.Map(document.getElementById(
+                        "map-canvas"), mapOptions),
+                    marker = new google.maps.Marker({
+                        position: result[0].geometry.location,
+                        map: map
+                    });
             });
         }
         initialize();
