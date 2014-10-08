@@ -65,9 +65,6 @@
                     'min-height': '100%'
                 });
             }
-        }(this));
-
-        (function () {
             if ($(config.dots).is($)) {
                 config.dots.append('<ul class="mc-ul"></ul>');
                 u = config.dots.find('.mc-ul');
@@ -76,7 +73,7 @@
                     u.append('<li></li>');
                 }
             }
-        }());
+        }(this));
 
         function mcActiveDots() {
             if ($(config.dots).is($)) {
