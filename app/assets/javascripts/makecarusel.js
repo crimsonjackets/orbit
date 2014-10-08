@@ -1,4 +1,5 @@
 (function ($) {
+    "use strict";
     $.fn.makecarousel = function (params) {
         var config = $.extend({
                 inStep: 1,
