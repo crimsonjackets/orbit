@@ -11,22 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009131658) do
+ActiveRecord::Schema.define(version: 20141009133524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "about_elements", force: true do |t|
-    t.string   "title"
-    t.string   "attachment_file_name"
-    t.string   "attachment_content_type"
-    t.integer  "attachment_file_size"
-    t.datetime "attachment_updated_at"
-    t.text     "description"
-    t.integer  "about_main_id"
-  end
-
-  create_table "about_mains", force: true do |t|
+  create_table "abouts", force: true do |t|
     t.string "title"
     t.text   "description"
   end
@@ -117,6 +107,15 @@ ActiveRecord::Schema.define(version: 20141009131658) do
   create_table "vacancy_mains", force: true do |t|
     t.string "title"
     t.text   "description"
+  end
+
+  create_table "workers", force: true do |t|
+    t.string   "title"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.text     "description"
   end
 
 end
