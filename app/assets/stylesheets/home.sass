@@ -8,15 +8,42 @@ body#root
     position: relative
     z-index: 9999
     background: #000
-    img
-      opacity: 0.5
     >.wrapper
       position: absolute
       left: 0
       right: 0
+    .mc-item
+      width: 100%
+      img
+        opacity: 0.5
+        min-width: 100%
+        min-height: 100%
+        margin: auto
+        position: absolute
+        left: 0
+        right: 0
+      .wrapper
+        position: absolute
+        margin: auto
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: 1
+        height: 500px
+        width: 700px
+        color: #f4f4f4
+        text-align: center
+        font-weight: 300
+        h1
+          font-weight: 300
+          line-height: 3em
+        p
+          font-size: 1.35em
+          margin: 2em
     .arrow-left
       background:
-        image: url('arrow_left_white.png')
+        image: image-url('arrow_left_white.png')
         repeat: no-repeat
       height: 56px
       width: 19px
@@ -31,7 +58,7 @@ body#root
       z-index: 1
       right: 0
       background:
-        image: url('arrow_right_white.png')
+        image: image-url('arrow_right_white.png')
         repeat: no-repeat
       height: 56px
       width: 19px
@@ -39,28 +66,13 @@ body#root
       margin: auto
       top: 0
       bottom: 0
-
-  .mc-window-text
-    .mc-item
-      color: #f4f4f4
-      text-align: center
-      font-weight: 300
-      margin-top: 100px
-      h1
-        font-weight: 300
-        line-height: 3em
-      p
-        font-size: 1.35em
-        margin: 2em
-      .wrapper
-        width: 700px
   .mc-dots
     ul
       position: absolute
       z-index: 1
       width: 100%
       text-align: center
-      bottom: 75px
+      bottom: 55px
       li
         display: inline-block
         width: 12px
