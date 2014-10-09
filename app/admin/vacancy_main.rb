@@ -11,4 +11,11 @@ ActiveAdmin.register VacancyMain do
     end
   end
 
+  show do
+    attributes_table do
+      row :title
+      row :description
+    end
+  end
+
 end

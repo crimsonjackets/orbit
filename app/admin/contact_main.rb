@@ -10,4 +10,10 @@ ActiveAdmin.register ContactMain do
     end
   end
 
+  show do
+    attributes_table do
+      row :title
+    end
+  end
+
 end
