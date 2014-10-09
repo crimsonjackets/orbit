@@ -1,5 +1,5 @@
 ActiveAdmin.register About do
-
+  permit_params :title, :description
   actions :all, except:[ :new, :destroy ]
 
   controller do

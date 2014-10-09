@@ -1,4 +1,5 @@
 ActiveAdmin.register VacancyMain do
+  permit_params :title, :description
 
   actions :all, except:[ :new, :destroy ]
 

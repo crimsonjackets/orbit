@@ -1,5 +1,5 @@
 ActiveAdmin.register ContactMain do
-
+  permit_params :title
   actions :all, except:[ :new, :destroy ]
 
   controller do
