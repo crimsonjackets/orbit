@@ -1,6 +1,9 @@
 ActiveAdmin.register Worker do
   permit_params :title, :attachment, :description
 
+  filter :title
+  filter :description
+
   index do
     column :attachment do |object|
       link_to image_tag(object.attachment.url(:thumb)), oradmin_worker_path(object)

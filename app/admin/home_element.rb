@@ -1,5 +1,8 @@
 ActiveAdmin.register HomeElement do
   permit_params :title, :attachment, :description
+
+  filter :title
+  filter :description
   
   index do
     column :attachment do |object|

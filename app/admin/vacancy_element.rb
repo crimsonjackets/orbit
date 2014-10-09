@@ -1,6 +1,9 @@
 ActiveAdmin.register VacancyElement do
   permit_params :title, :attachment, :description
 
+  filter :title
+  filter :description
+
   index do
     column :attachment do |object|
       link_to image_tag(object.attachment.url(:thumb)), oradmin_vacancy_element_path(object)

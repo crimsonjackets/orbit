@@ -17,3 +17,6 @@
 /vendor/bundle
 /config/database.yml
 /config/secrets.yml
+
+# Ignore all uploads
+/public/system
