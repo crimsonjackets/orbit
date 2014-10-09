@@ -1,5 +1,6 @@
 ActiveAdmin.register ContactElement do
   permit_params :title, :address, :phone
+  menu priority: 11
 
   index do
     column :title do |object|

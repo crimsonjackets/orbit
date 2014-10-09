@@ -1,6 +1,7 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
   actions :all, except: :destroy
+  menu priority: 99
 
   index do
     column :email do |admin|

@@ -1,5 +1,6 @@
 ActiveAdmin.register Done do
   permit_params :title, :attachment, :description
+  menu priority: 9
 
   filter :title
   filter :description

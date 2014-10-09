@@ -408,7 +408,7 @@ ru:
 #Model, attributes etc.
   activerecord:
     models:
-      about: "О нас"
+      about: "О компании"
       admin_user:
         one: "Администратор"
         other: "Администраторы"

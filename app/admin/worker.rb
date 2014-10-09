@@ -1,5 +1,6 @@
 ActiveAdmin.register Worker do
   permit_params :title, :attachment, :description
+  menu priority: 5
 
   filter :title
   filter :description

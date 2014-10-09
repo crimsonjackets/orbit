@@ -1,6 +1,7 @@
 ActiveAdmin.register HomeMain do
   permit_params :title, :description
   actions :all, except:[ :new, :destroy ]
+  menu priority: 2
 
   controller do
     def index

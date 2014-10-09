@@ -1,5 +1,6 @@
 ActiveAdmin.register HomeElement do
   permit_params :title, :attachment, :description
+  menu priority: 3
 
   filter :title
   filter :description
