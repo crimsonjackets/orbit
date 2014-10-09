@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.1.0'
-gem 'sqlite3'
+gem 'pg'
 gem 'wiselinks'
 gem 'slim-rails'
 gem 'sass-rails'
@@ -25,6 +24,3 @@ group :development do
   gem 'pry-rails',          '~> 0.3.2'
 end
 
-group :production do
-  gem 'pg'
-end

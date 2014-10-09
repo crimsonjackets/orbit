@@ -17,11 +17,10 @@ set :deploy_to, "/home/rails/#{application}"
 set :shared_children, %w(public/uploads log tmp/pids tmp/sockets)
 set :use_sudo,  false
 
-role :web, "188.226.244.217"
-role :app, "188.226.244.217"
-role :db,  "188.226.244.217", primary: true
+role :web, "95.85.16.96"
+role :app, "95.85.16.96"
+role :db,  "95.85.16.96", primary: true
 
-set :branch, :old_hyper
 set :deploy_to, "/home/rails/#{application}"
 set :rails_env, 'production'
 
