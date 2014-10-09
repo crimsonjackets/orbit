@@ -13,6 +13,7 @@ gem 'fotoramajs'
 gem 'autoprefixer-rails'
 gem 'bourbon'
 gem 'jquery-rails'
+gem 'therubyracer'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
