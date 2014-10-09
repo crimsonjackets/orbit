@@ -10,66 +10,34 @@
                 transition: '.5s all ease',
                 cover: false
             }, params),
-            w,
-            t,
-            ws,
-            ts,
-            text = [],
+            pack,
+            img,
+            item,
+            win,
             u,
             slide;
 
         (function (thisBody) {
-            var div;
-            w = $('<div class="mc-window-images"></div>').appendTo(thisBody);
-            t = $('<div class="mc-window-text"></div>').appendTo(thisBody);
-            ws = thisBody.find('img');
-            ws.each(function () {
-                div = $(this).parent();
-                w.append(this);
-                text.push(div.html());
-                div.remove();
+            thisBody.addClass('mc-body');
+            win = $('<div class="mc-window"></div>').appendTo(thisBody);
+            pack = $('<div class="mc-pack-images"></div>').appendTo(win);
+            img = thisBody.find('img');
+            img.each(function () {
+                $(this).parent().addClass('mc-item').appendTo(pack);
             });
-            ws.each(function (i) {
-                t.append('<div class="mc-item"></div>');
-                t.find('.mc-item').last().html(text[i]);
-            });
-            ts = t.find('.mc-item');
-            thisBody.css({
-                'overflow': 'hidden'
-            });
-            w.css({
-                'width': 100 * ws.length + '%',
-                'transition': config.transition,
-                'position': 'absolute',
-                'height': '100%'
-            });
-            t.css({
-                'position': 'absolute',
-                'width': 100 * ws.length + '%',
+            item = thisBody.find('.mc-item');
+            pack.css({
+                'width': 100 * item.length + '%',
                 'transition': config.transition
             });
-            ts.css({
-                'position': 'relative',
-                'float': 'left',
-                'width': 100 / ws.length / config.inStep + '%'
+            item.css({
+                'width': 100 / item.length / config.inStep + '%'
             });
-            ws.css({
-                'float': 'left',
-                'width': 100 / ws.length / config.inStep + '%'
-            });
-            if (config.cover) {
-                ts.css({
-                    'min-height': '100%'
-                });
-                ws.css({
-                    'min-height': '100%'
-                });
-            }
             if ($(config.dots).is($)) {
                 config.dots.append('<ul class="mc-ul"></ul>');
                 u = config.dots.find('.mc-ul');
                 var i;
-                for (i = 0; i < ws.length - (config.inStep - 1); i += 1) {
+                for (i = 0; i < item.length - (config.inStep - 1); i += 1) {
                     u.append('<li></li>');
                 }
             }
@@ -86,11 +54,9 @@
 
         slide = function (p) {
             config.currentNum += config.currentNum + p >= 0 &&
-                config.currentNum + p < ws.length -
+                config.currentNum + p < item.length -
                 (config.inStep - 1) ? p : 0;
-            w.css('margin-left', -config.currentNum * 100 / config.inStep +
-                '%');
-            t.css('margin-left', -config.currentNum * 100 / config.inStep +
+            pack.css('margin-left', -config.currentNum * 100 / config.inStep +
                 '%');
             mcActiveDots();
         };
