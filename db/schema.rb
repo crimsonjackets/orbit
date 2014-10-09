@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009135907) do
+ActiveRecord::Schema.define(version: 20141009142151) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,10 +55,9 @@ ActiveRecord::Schema.define(version: 20141009135907) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "contact_elements", force: true do |t|
-    t.string  "title"
-    t.string  "address"
-    t.string  "phone"
-    t.integer "contact_main_id"
+    t.string "title"
+    t.string "address"
+    t.string "phone"
   end
 
   create_table "contact_mains", force: true do |t|
@@ -81,7 +80,6 @@ ActiveRecord::Schema.define(version: 20141009135907) do
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.text     "description"
-    t.integer  "home_main_id"
   end
 
   create_table "home_mains", force: true do |t|
@@ -101,7 +99,6 @@ ActiveRecord::Schema.define(version: 20141009135907) do
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
     t.text     "description"
-    t.integer  "vacancy_main_id"
   end
 
   create_table "vacancy_mains", force: true do |t|

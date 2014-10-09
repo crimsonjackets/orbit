@@ -1,5 +1,4 @@
 class VacancyElement < ActiveRecord::Base
-  belongs_to :vacancy_main
   has_attached_file :attachment ,
                     styles: {thumb: '148x110#',
                              x220:'296x220#'},
