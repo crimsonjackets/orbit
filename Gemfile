@@ -17,3 +17,14 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
+gem 'unicorn'
+
+group :development do
+  gem 'capistrano',         '2.15.5'
+  gem 'rvm-capistrano'
+  gem 'pry-rails',          '~> 0.3.2'
+end
+
+group :production do
+  gem 'pg'
+end
