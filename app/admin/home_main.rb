@@ -1,18 +1,13 @@
 ActiveAdmin.register HomeMain do
 
+  actions :all, except:[ :new, :destroy ]
 
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
-
+  controller do
+    def index
+      super do |format|
+        redirect_to action: :show, id: 1 and return
+      end
+    end
+  end
 
 end
