@@ -4,9 +4,11 @@
   .page-name
     span виды работ
   #jobs-types
-    .arrow-right
-    -(1..2).each do
-      .col
+    .wrapper
+      input.arrow-right.button type='button'
+      input.arrow-left.button type='button'
+    -(1..4).each do
+      .mc-item
         -(1..3).each do
           .item
             .num 01

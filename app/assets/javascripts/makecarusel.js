@@ -21,11 +21,12 @@
             thisBody.addClass('mc-body');
             win = $('<div class="mc-window"></div>').appendTo(thisBody);
             pack = $('<div class="mc-pack-images"></div>').appendTo(win);
-            img = thisBody.find('img');
-            img.each(function () {
-                $(this).parent().addClass('mc-item').appendTo(pack);
-            });
+            // img = thisBody.find('img');
             item = thisBody.find('.mc-item');
+            item.each(function () {
+                // TODO
+                $(this).addClass('mc-item').appendTo(pack);
+            });
             pack.css({
                 'width': 100 * item.length + '%',
                 'transition': config.transition
@@ -60,15 +61,18 @@
                 '%');
             mcActiveDots();
         };
+
         if (config.next !== null) {
             config.next.click(function () {
                 slide(1);
             });
         }
+
         if (config.prev !== null) {
             config.prev.click(function () {
                 slide(-1);
             });
         }
+
     };
 }(jQuery));

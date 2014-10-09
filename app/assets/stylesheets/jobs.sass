@@ -1,27 +1,39 @@
 body#jobs
   #jobs-types
     margin-top: 70px
-    overflow: hidden
     position: relative
-    .arrow-right
-      cursor: pointer
-      position: absolute
-      right: 0
-      top: -50px
+    height: 330px
+    width: 940px
+    .arrow-left
       bottom: 0
-      width: 19px
+      top: 0
+      position: absolute
+      z-index: 1
       height: 56px
       margin: auto
+      cursor: pointer
+      left: -50px
+      width: 19px
+      background:
+        image: image-url('arrow_left_blue.png')
+        repeat: no-repeat
+    .arrow-right
+      bottom: 0
+      top: 0
+      position: absolute
+      z-index: 1
+      cursor: pointer
+      height: 56px
+      margin: auto
+      right: -50px
+      width: 19px
       background:
         image: image-url('arrow_right_blue.png')
         repeat: no-repeat
-    .col
-      display: inline-block
     .item
       height: 68px
       width: 400px
-      margin-bottom: 60px
-      margin-right: 70px
+      margin: 0 70px 60px 40px
       .num
         width: 68px
         height: 68px
