@@ -31,31 +31,28 @@ after "deploy:update_code", "db:symlink"
 before "deploy:assets:precompile", "deploy:setup_config", "db:symlink"
 
 namespace :db do
-  # desc "Make symlink for database yaml"
-  # task :symlink do
-  #   run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-  # end
-
-  # desc "Rollback database"
-  # task :rollback, :roles => :db, :only => { :primary => true } do
-  #   run "cd #{current_path}; bundle exec rake db:rollback RAILS_ENV=#{rails_env}"
-  # end
+  desc "Make symlink for database yaml"
+  task :symlink do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
+  end
 end
 
 namespace :deploy do
-  # desc "Database config"
-  # task :setup_config, roles: :app do
-  #   run "mkdir -p #{shared_path}/config"
-  #   put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
-  # end
+  desc "Database config"
+  task :setup_config, roles: :app do
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/secrets.yml"), "#{shared_path}/config/secrets.yml"
+  end
 
-  # desc "Start unicorn"
-  # task :start, :roles => :app, :except => { :no_release => true } do
-  #   # run "cd #{current_path}; bundle exec unicorn -c config/unicorn.rb -E #{rails_env} -D -p 4005"
-  # end
+  desc "Start unicorn"
+  task :start, :roles => :app, :except => { :no_release => true } do
+    run "cd #{current_path}; bundle exec unicorn -c config/unicorn.rb -E #{rails_env} -D -p 4001"
+  end
 
-  # desc "Stop unicorn"
-  # task :stop, :roles => :app, :except => { :no_release => true } do
-  #   run "kill -s QUIT `cat #{shared_path}/pids/unicorn.pid`"
-  # end
+  desc "Stop unicorn"
+  task :stop, :roles => :app, :except => { :no_release => true } do
+    run "kill -s QUIT `cat #{shared_path}/pids/unicorn.pid`"
+  end
 end
