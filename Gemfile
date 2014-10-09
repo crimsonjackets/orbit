@@ -18,6 +18,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'unicorn'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'paperclip'
 
 group :development do
   gem 'capistrano',         '2.15.5'

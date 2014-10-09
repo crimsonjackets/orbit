@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get 'vacancy', to: 'vacancy#index'
   get 'done', to: 'done#index'
   get 'contacts', to: 'contacts#index'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 end
