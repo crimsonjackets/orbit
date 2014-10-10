@@ -1,5 +1,8 @@
 Простой сайт-визитка компании orbit.
 ------
+`bindle exec rake db:create` -> `bundle exec rake db:migrate db:seed`.
+------
+
 Админка: /oradmin
 Логпасс: cr@cr.cr: crimson0rb
 ------
