@@ -85,12 +85,6 @@ class InitMigration < ActiveRecord::Migration
     remove_column :contact_elements, :contact_main_id
     remove_column :home_elements, :home_main_id
     remove_column :vacancy_elements, :vacancy_main_id
-
-    # Create admin user
-    AdminUser.find_or_create_by(email: 'cr@cr.cr') do |a|
-      a.password = 'crimson0rb'
-      a.password_confirmation = 'crimson0rb'
-    end
   end
 
   def down
