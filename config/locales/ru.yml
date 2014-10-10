@@ -412,13 +412,13 @@ ru:
       admin_user:
         one: "Администратор"
         other: "Администраторы"
-      contact_main: "Контакты - общее"
+      contact_main: "Контакты - общее описание"
       contact_element:
         one: "Контакт"
         other: "Контакты"
       done:
-        one: "Объект"
-        other: "Объекты"
+        one: "Выполненный объект"
+        other: "Выполненные объекты"
       home_main: "Главная"
       home_element:
         one: "Элемент главной"
@@ -426,7 +426,7 @@ ru:
       job:
         one: "Вид работ"
         other: "Виды работ"
-      vacancy_main: "Вакансии - общее"
+      vacancy_main: "Вакансии - общее описание"
       vacancy_element:
         one: "Вакансия"
         other: "Вакансии"

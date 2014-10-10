@@ -1,6 +1,6 @@
 ActiveAdmin.register Job do
   permit_params :title, :description
-  menu priority: 6
+  menu priority: 3
 
   index do
     column :title

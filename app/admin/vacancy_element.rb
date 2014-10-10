@@ -1,6 +1,6 @@
 ActiveAdmin.register VacancyElement do
   permit_params :title, :attachment, :description
-  menu priority: 8
+  menu parent: 'Вакансии'
 
   filter :title
   filter :description

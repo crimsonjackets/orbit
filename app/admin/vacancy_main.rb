@@ -1,6 +1,6 @@
 ActiveAdmin.register VacancyMain do
   permit_params :title, :description
-  menu priority: 7
+  menu parent: 'Вакансии'
 
   actions :all, except:[ :new, :destroy ]
 
