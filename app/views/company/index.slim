@@ -5,7 +5,7 @@
     .page-name
       span о компании
     .photo-CEO
-      = image_tag @member.first.attachment.url
+      = image_tag @member.first.attachment.url(:x333)
       .image-des = @member.first.description
         
     .about-company
@@ -19,7 +19,7 @@
     #mc-slider
       - @member.each do |i|
         .mc-item
-          = image_tag i.attachment.url
+          = image_tag i.attachment.url(:x333)
           .name = i.title
       .wrapper
         input.arrow-right.button type='button'

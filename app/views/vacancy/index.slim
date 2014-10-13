@@ -19,7 +19,7 @@
     #mc-slider
       - @vacancy.each do |i|
         .mc-item
-          = image_tag i.attachment.url
+          = image_tag i.attachment.url(:x220)
           .name = i.title
           p = i.description
           / .price З/п от 25 000 руб.
