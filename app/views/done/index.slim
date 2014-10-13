@@ -8,7 +8,7 @@
   #mc-slider
     - @done.each do |i|
       .mc-item
-        = image_tag i.attached.url(:x325)
+        = image_tag i.attachment.url(:x325)
     .wrapper
       input.arrow-right.button type='button'
       input.arrow-left.button type='button'
@@ -22,5 +22,5 @@
     .right
       - @done.each do |i|
         h3 = i.title
-        p = i.descript
+        p = i.description
         .dots
