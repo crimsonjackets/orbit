@@ -412,6 +412,9 @@ ru:
       admin_user:
         one: "Администратор"
         other: "Администраторы"
+      client:
+        one: "Клиент"
+        other: "Клиенты"
       contact_main: "Контакты - общее описание"
       contact_element:
         one: "Контакт"
@@ -445,6 +448,8 @@ ru:
         attachment: "Вложение"
 
       about:
+        <<: *admin_general
+      client:
         <<: *admin_general
       contact_main:
         <<: *admin_general
