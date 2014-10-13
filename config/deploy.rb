@@ -14,7 +14,7 @@ set :ssh_options, { forward_agent: true }
 
 set :user, "rails"
 set :deploy_to, "/home/rails/#{application}"
-set :shared_children, %w(public/uploads log tmp/pids tmp/sockets)
+set :shared_children, %w(public/uploads public/images log tmp/pids tmp/sockets)
 set :use_sudo,  false
 
 role :web, "95.85.16.96"
