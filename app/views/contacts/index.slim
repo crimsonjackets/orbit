@@ -20,7 +20,12 @@ script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"
     /   .tel тел. (881374)-725-09
 
     .callback
-      p info@orbita-spb.ru
-      textarea placeholder="Оставьте нам сообщение..."
+      /p info@orbita-spb.ru
+      /textarea placeholder="Оставьте нам сообщение..."
+      =form_tag("/contacts", method: "post") do
+        =label_tag(:feedback, "info@orbita-spb.ru")
+        textarea id="feedback" name="feedback" placeholder="Оставьте нам сообщение..."
+        =submit_tag("Отправить")
+
   .col12
     #map-canvas width="200px" height="650px"

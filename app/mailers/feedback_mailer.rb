@@ -1,7 +1,7 @@
 class FeedbackMailer < ActionMailer::Base
-  default from: "feedback@orbita-spb.ru"
-  def mail(feedback)
+  default from: "no-reply@orbita-spb.ru"
+  def feedback_mail(feedback)
     @feedback = feedback
-    mail to: 'tiburon1995@gmail.com', subject: 'Сообщение с сайта' #TODO actual mailto address
+    mail to: 'tiburon19@yandex.ru', subject: 'Сообщение с сайта'
   end
 end

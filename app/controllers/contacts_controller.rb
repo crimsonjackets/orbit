@@ -3,8 +3,8 @@ class ContactsController < ApplicationController
     @contact = ContactElement.all
     @main = ContactMain.first
   end
-  def mail
-    FeedbackMailer.mail(params[:feedback]).deliver
-    redirect_to 'contacts#index'
+  def feedback_mail
+    FeedbackMailer.feedback_mail(params[:feedback]).deliver
+    redirect_to '/contacts'
   end
 end
