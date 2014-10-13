@@ -1,6 +1,6 @@
 ActiveAdmin.register Worker do
   permit_params :title, :attachment, :description
-  menu priority: 5
+  menu parent: 'О компании'
 
   filter :title
   filter :description

@@ -10,7 +10,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  config.site_title_link = "/"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -110,7 +110,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  config.root_to = 'home_mains#index'
 
 
   # == Admin Comments
@@ -131,7 +131,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
 
   # == Controller Filters
@@ -200,6 +200,14 @@ ActiveAdmin.setup do |config|
   #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #     end
   #   end
+  config.namespace :oradmin do |admin|
+    admin.build_menu do |menu|
+      menu.add label: 'Главная', priority: 1
+      menu.add label: 'О компании', priority: 2
+      menu.add label: 'Вакансии', priority: 4
+      menu.add label: 'Контакты', priority: 6
+    end
+  end
 
 
   # == Download Links
@@ -209,10 +217,10 @@ ActiveAdmin.setup do |config|
   #
   # To disable/customize for the :admin namespace:
   #
-  #   config.namespace :admin do |admin|
+     config.namespace :oradmin do |admin|
   #
   #     # Disable the links entirely
-  #     admin.download_links = false
+        admin.download_links = false
   #
   #     # Only show XML & PDF options
   #     admin.download_links = [:xml, :pdf]
@@ -221,7 +229,7 @@ ActiveAdmin.setup do |config|
   #     #   (for example, with cancan)
   #     admin.download_links = proc { can?(:view_download_links) }
   #
-  #   end
+    end
 
 
   # == Pagination

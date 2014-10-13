@@ -1,7 +1,7 @@
 ActiveAdmin.register ContactMain do
   permit_params :title
   actions :all, except:[ :new, :destroy ]
-  menu priority: 10
+  menu parent: 'Контакты'
 
   controller do
     def index

@@ -1,7 +1,7 @@
 ActiveAdmin.register About do
   permit_params :title, :description
   actions :all, except:[ :new, :destroy ]
-  menu priority: 4
+  menu parent: 'О компании'
 
   controller do
     def index
