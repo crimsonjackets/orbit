@@ -4,6 +4,7 @@ html
     meta charset='utf-8'
     title Orbit
     = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   body id="#{@page}"
     #wrapper
@@ -11,4 +12,3 @@ html
       = yield
       #sticky-push
     = render 'layouts/footer'
-    = javascript_include_tag 'application'

@@ -6,4 +6,4 @@ $(document).ready(function () {
             inStep: 2
         });
     }
-})
+});

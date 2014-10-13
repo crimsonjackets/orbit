@@ -7,10 +7,10 @@
     .wrapper
       input.arrow-right.button type='button'
       input.arrow-left.button type='button'
-    -(1..4).each do
+    - @job.each_slice(3) do |i|
       .mc-item
-        -(1..3).each do
+        - i.each do |j|
           .item
-            .num 01
-            .name Территориальное планирование
-            .description Направлено на определение в документах территориального планирования
+            .num = j.id
+            .name = j.title
+            .description = j.description
