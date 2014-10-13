@@ -110,7 +110,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  config.root_to = 'home_mains#index'
+  config.root_to = 'home_elements#index'
 
 
   # == Admin Comments
@@ -202,7 +202,6 @@ ActiveAdmin.setup do |config|
   #   end
   config.namespace :oradmin do |admin|
     admin.build_menu do |menu|
-      menu.add label: 'Главная', priority: 1
       menu.add label: 'О компании', priority: 2
       menu.add label: 'Вакансии', priority: 4
       menu.add label: 'Контакты', priority: 6

@@ -1,6 +1,6 @@
 ActiveAdmin.register HomeElement do
   permit_params :title, :attachment, :description
-  menu parent: 'Главная'
+  menu priority: 1
 
   filter :title
   filter :description
